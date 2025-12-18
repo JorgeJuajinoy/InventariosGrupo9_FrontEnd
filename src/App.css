@@ -1,0 +1,26 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #f97316;
+  color: white;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+main {
+  margin-top: 60px; /* compensa el header fijo */
+  padding: 1rem;
+}
+
+.vista-principal {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.contenido-principal {
+  flex: 1;
+}

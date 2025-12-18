@@ -1,0 +1,34 @@
+.cliente-panel {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.cliente-titulo {
+  font-size: 2rem;
+  color: #00ff7f; /* verde brillante para resaltar el rol cliente */
+  margin-bottom: 1rem;
+}
+
+.cliente-correo {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.cliente-seccion {
+  margin-bottom: 2rem;
+}
+
+.cliente-seccion h3 {
+  color: #00fa9a;
+  margin-bottom: 0.5rem;
+}
+
+.cliente-seccion ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cliente-seccion li {
+  margin-bottom: 0.5rem;
+}

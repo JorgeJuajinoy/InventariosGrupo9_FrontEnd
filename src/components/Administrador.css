@@ -1,0 +1,53 @@
+.admin-panel {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.admin-titulo {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.admin-correo {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.admin-seccion {
+  margin-bottom: 2rem;
+}
+
+.admin-seccion h3 {
+  color: #ffcc00;
+  margin-bottom: 0.5rem;
+}
+
+.admin-seccion ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.admin-seccion li {
+  margin-bottom: 0.5rem;
+}
+
+.actualizar-container {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.btn-actualizar {
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-actualizar:hover {
+  background: #0056b3;
+}

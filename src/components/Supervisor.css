@@ -1,0 +1,53 @@
+.supervisor-panel {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.supervisor-titulo {
+  font-size: 2rem;
+  color: #00bfff;
+  margin-bottom: 1rem;
+}
+
+.supervisor-correo {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.supervisor-seccion {
+  margin-bottom: 2rem;
+}
+
+.supervisor-seccion h3 {
+  color: #00d4ff;
+  margin-bottom: 0.5rem;
+}
+
+.supervisor-seccion ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.supervisor-seccion li {
+  margin-bottom: 0.5rem;
+}
+
+.actualizar-container {
+  text-align: right; /* alinea el botón a la derecha */
+  margin-bottom: 15px;
+}
+
+.btn-actualizar {
+  padding: 6px 12px; /* más pequeño */
+  font-size: 14px; /* texto más pequeño */
+  background: #28a745; /* verde */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-actualizar:hover {
+  background: #218838; /* verde más oscuro al pasar el mouse */
+}

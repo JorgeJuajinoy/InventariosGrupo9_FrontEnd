@@ -1,0 +1,34 @@
+.vendedor-panel {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.vendedor-titulo {
+  font-size: 2rem;
+  color: #ffa500; /* naranja para resaltar el rol comercial */
+  margin-bottom: 1rem;
+}
+
+.vendedor-correo {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.vendedor-seccion {
+  margin-bottom: 2rem;
+}
+
+.vendedor-seccion h3 {
+  color: #ffb347;
+  margin-bottom: 0.5rem;
+}
+
+.vendedor-seccion ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.vendedor-seccion li {
+  margin-bottom: 0.5rem;
+}

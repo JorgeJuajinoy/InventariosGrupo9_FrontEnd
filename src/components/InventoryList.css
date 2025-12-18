@@ -1,0 +1,55 @@
+.carrusel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* ancho máximo visible */
+  margin: auto;
+  overflow: hidden;
+}
+
+.carrusel-productos {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carrusel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.8s ease;
+}
+
+.card-producto {
+  flex: 0 0 300px; /* ancho fijo por tarjeta */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de navegación */
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  z-index: 10; /* asegura que esté por encima del carrusel */
+}
+
+.carrusel-btn:hover {
+  opacity: 1;
+}
+
+.carrusel-btn.prev {
+  left: 10px; /* coloca la flecha a la izquierda */
+}
+
+.carrusel-btn.next {
+  right: 10px; /* coloca la flecha a la derecha */
+}

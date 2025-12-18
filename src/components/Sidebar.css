@@ -1,0 +1,32 @@
+.sidebar {
+  width: 220px;
+  background-color: #1f2937;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.sidebar-titulo {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fcd34d;
+}
+
+.sidebar-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-link {
+  display: block;
+  color: #fcd34d;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sidebar-link:hover {
+  color: #ffffff;
+}

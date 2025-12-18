@@ -1,0 +1,61 @@
+.busqueda-barra {
+  margin-bottom: 15px;
+}
+
+.busqueda-barra input {
+  padding: 6px;
+  width: 300px;
+  margin-right: 8px;
+}
+
+.btn-buscar {
+  padding: 6px 12px;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-buscar:hover {
+  background-color: #005fa3;
+}
+
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-productos th,
+.tabla-productos td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f9f9; /* 👈 fondo claro */
+  color: #222; /* 👈 texto oscuro para contraste */
+}
+
+.tabla-productos th,
+.tabla-productos td {
+  border: 1px solid #ddd; /* 👈 bordes suaves */
+  padding: 8px;
+  text-align: left;
+}
+
+.tabla-productos th {
+  background-color: #eaeaea; /* 👈 encabezado más claro */
+  font-weight: bold;
+}
+
+.tabla-productos tr:nth-child(even) {
+  background-color: #f2f2f2; /* 👈 filas alternas */
+}
+
+.tabla-productos tr:hover {
+  background-color: #e0f0ff; /* 👈 resaltado al pasar el mouse */
+}

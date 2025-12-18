@@ -1,0 +1,37 @@
+.buscar-productos.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.titulo-institucional {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.barra-busqueda {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.campo-busqueda {
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+.mensaje-vacio,
+.mensaje-info,
+.mensaje-error {
+  margin: 12px 0;
+  font-size: 0.95rem;
+}
+
+.mensaje-error {
+  color: #b00020;
+}
+
+.grid-productos .col-md-4 {
+  display: flex;
+}

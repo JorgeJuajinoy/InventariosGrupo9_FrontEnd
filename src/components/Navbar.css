@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;
+  padding: 1rem 2rem;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.navbar-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-title {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.navbar-slogan {
+  font-size: 1rem;
+  font-style: italic;
+  color: #fcd34d;
+  margin: 0.2rem 0 0 0;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #fcd34d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
