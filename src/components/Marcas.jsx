@@ -2,11 +2,15 @@ import "./Marcas.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+// 👇 Importa la constante global
+import { API_BASE } from "./config";
+
 function Marcas() {
   const [marcas, setMarcas] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost/InventariosGrupo9/marcas.php")
+    // 👉 Ahora usamos API_BASE en lugar de localhost
+    fetch(`${API_BASE}/marcas.php`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Respuesta API:", data);

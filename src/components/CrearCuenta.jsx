@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./CrearCuenta.css";
 
+// 👇 Importa la constante global
+import { API_BASE } from "./config";
+
 function CrearCuenta() {
   const [formData, setFormData] = useState({
     nombre: "",
@@ -31,13 +34,11 @@ function CrearCuenta() {
         datos.append(key, formData[key]);
       });
 
-      const respuesta = await fetch(
-        "http://localhost/InventariosGrupo9/crear_cuenta.php",
-        {
-          method: "POST",
-          body: datos,
-        }
-      );
+      // 👉 Ahora usamos API_BASE en lugar de localhost
+      const respuesta = await fetch(`${API_BASE}/crear_cuenta.php`, {
+        method: "POST",
+        body: datos,
+      });
 
       const resultado = await respuesta.json();
       if (resultado.exito) {

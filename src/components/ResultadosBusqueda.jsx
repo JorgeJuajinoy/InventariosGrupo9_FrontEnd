@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./ResultadosBusqueda.css";
 
+// 👇 Importa la constante global
+import { API_BASE } from "./config";
+
 function ResultadosBusqueda() {
   const [searchParams] = useSearchParams();
   const terminoInicial = searchParams.get("q") || "";
@@ -11,10 +14,8 @@ function ResultadosBusqueda() {
   useEffect(() => {
     if (termino.trim() === "") return;
 
-    fetch(
-      "http://localhost/InventariosGrupo9/buscar_productos.php?q=" +
-        encodeURIComponent(termino)
-    )
+    // 👉 Ahora usamos API_BASE en lugar de localhost
+    fetch(`${API_BASE}/buscar_productos.php?q=${encodeURIComponent(termino)}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.exito) {

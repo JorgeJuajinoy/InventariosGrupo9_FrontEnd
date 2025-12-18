@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Supervisor.css";
 
+// 👇 Importa la constante global
+import { API_BASE } from "./config";
+
 function Supervisor() {
   const correo = localStorage.getItem("correo");
   const [movimientos, setMovimientos] = useState([]);
@@ -13,7 +16,7 @@ function Supervisor() {
 
   // Función para cargar movimientos
   const cargarMovimientos = () => {
-    fetch("http://localhost/InventariosGrupo9/visualizarmovimientos.php")
+    fetch(`${API_BASE}/visualizarmovimientos.php`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Respuesta API movimientos:", data);
@@ -26,7 +29,7 @@ function Supervisor() {
 
   // Función para cargar productos críticos
   const cargarProductosCriticos = () => {
-    fetch("http://localhost/InventariosGrupo9/bajostock.php?umbral=5")
+    fetch(`${API_BASE}/bajostock.php?umbral=5`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Respuesta API bajo stock:", data);

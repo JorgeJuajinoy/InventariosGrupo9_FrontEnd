@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./Login.css";
 
+// 👇 Importa la constante global
+import { API_BASE } from "./config";
+
 function Login() {
   const [correo, setCorreo] = useState("");
   const [clave, setClave] = useState("");
@@ -10,23 +13,20 @@ function Login() {
     e.preventDefault();
 
     try {
-      const respuesta = await fetch(
-        "http://localhost/InventariosGrupo9/login.php",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ correo, clave }),
-        }
-      );
+      const respuesta = await fetch(`${API_BASE}/login.php`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ correo, clave }),
+      });
 
       const resultado = await respuesta.json();
 
       if (resultado.exito) {
         localStorage.setItem("correo", correo);
         localStorage.setItem("rol", resultado.usuario.rol);
-        setMensaje("Ingreso exitoso");
+        setMensaje("Ingreso exitoso ✅");
 
         switch (resultado.usuario.rol) {
           case "Cliente":
@@ -45,13 +45,13 @@ function Login() {
             window.location.href = "/vendedor";
             break;
           default:
-            setMensaje("Rol no reconocido");
+            setMensaje("Rol no reconocido ❌");
         }
       } else {
-        setMensaje(resultado.mensaje || "Credenciales incorrectas");
+        setMensaje(resultado.mensaje || "Credenciales incorrectas ❌");
       }
     } catch (error) {
-      setMensaje("Error de conexión");
+      setMensaje("Error de conexión con el servidor");
     }
   };
 

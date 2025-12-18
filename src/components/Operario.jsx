@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./Operario.css";
 
+// 👇 Importa la constante global
+import { API_BASE } from "./config";
+
 function Operario() {
   const correo = localStorage.getItem("correo");
   const [formularioActivo, setFormularioActivo] = useState(null);
@@ -16,20 +19,18 @@ function Operario() {
     data.tipo_movimiento = tipo;
 
     try {
-      const response = await fetch(
-        "http://localhost/InventariosGrupo9/movimientos.php",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        }
-      );
+      // 👉 Ahora usamos API_BASE en lugar de localhost
+      const response = await fetch(`${API_BASE}/movimientos.php`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
       const result = await response.json();
-      alert(result.message || "Movimiento registrado correctamente");
+      alert(result.message || "Movimiento registrado correctamente ✅");
     } catch (error) {
       console.error("Error al enviar:", error);
-      alert("Error al registrar movimiento");
+      alert("Error al registrar movimiento ❌");
     }
   };
 

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Administrador.css";
 
+// 👇 Importa la constante global desde config.js
+import { API_BASE } from "./config";
+
 function Administrador() {
   const correo = localStorage.getItem("correo");
   const [resumen, setResumen] = useState(null);
@@ -13,7 +16,7 @@ function Administrador() {
 
   // Funciones para cargar datos
   const cargarResumen = () => {
-    fetch("http://localhost/InventariosGrupo9/resumen_stock.php")
+    fetch(`${API_BASE}/resumen_stock.php`)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) setResumen(data.data);
@@ -22,7 +25,7 @@ function Administrador() {
   };
 
   const cargarUsuarios = () => {
-    fetch("http://localhost/InventariosGrupo9/usuarios.php")
+    fetch(`${API_BASE}/usuarios.php`)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) setUsuarios(data.data);
