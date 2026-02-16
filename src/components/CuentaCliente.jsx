@@ -4,7 +4,7 @@ import ProductoCard from "./ProductoCard";
 import "./InventoryList.css";
 
 // 👇 Importa la constante global
-import { API_BASE } from "./config";
+import { API_BASE } from "../config";
 
 function BuscarProductos() {
   const [productos, setProductos] = useState([]);

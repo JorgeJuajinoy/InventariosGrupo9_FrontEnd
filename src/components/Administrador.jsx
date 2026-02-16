@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Administrador.css";
 
 // 👇 Importa la constante global desde config.js
-import { API_BASE } from "./config";
+import { API_BASE } from "../config";
 
 function Administrador() {
   const correo = localStorage.getItem("correo");

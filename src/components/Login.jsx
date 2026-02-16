@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-
-// 👇 Importa la constante global
-import { API_BASE } from "./config";
+import { API_BASE } from "../config";
 
 function Login() {
   const [correo, setCorreo] = useState("");
@@ -11,6 +9,7 @@ function Login() {
 
   const manejarLogin = async (e) => {
     e.preventDefault();
+    setMensaje("");
 
     try {
       const respuesta = await fetch(`${API_BASE}/login.php`, {
@@ -18,14 +17,24 @@ function Login() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ correo, clave }),
+        body: JSON.stringify({
+          correo: correo.trim(),
+          clave: clave.trim(),
+        }),
       });
 
+      // 👉 Si el servidor respondió con error HTTP
+      if (!respuesta.ok) {
+        throw new Error(`Error HTTP: ${respuesta.status}`);
+      }
+
       const resultado = await respuesta.json();
+      console.log("Respuesta backend:", resultado);
 
       if (resultado.exito) {
-        localStorage.setItem("correo", correo);
+        localStorage.setItem("correo", resultado.usuario.correo);
         localStorage.setItem("rol", resultado.usuario.rol);
+
         setMensaje("Ingreso exitoso ✅");
 
         switch (resultado.usuario.rol) {
@@ -51,6 +60,7 @@ function Login() {
         setMensaje(resultado.mensaje || "Credenciales incorrectas ❌");
       }
     } catch (error) {
+      console.error("Error en login:", error);
       setMensaje("Error de conexión con el servidor");
     }
   };
@@ -58,6 +68,7 @@ function Login() {
   return (
     <div className="login-container">
       <h2 className="login-titulo">Acceso al sistema</h2>
+
       <form onSubmit={manejarLogin} className="login-formulario">
         <label>Correo electrónico</label>
         <input
@@ -79,6 +90,7 @@ function Login() {
           Ingresar
         </button>
       </form>
+
       {mensaje && <p className="login-mensaje">{mensaje}</p>}
     </div>
   );

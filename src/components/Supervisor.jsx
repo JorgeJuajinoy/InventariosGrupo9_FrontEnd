@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Supervisor.css";
 
 // 👇 Importa la constante global
-import { API_BASE } from "./config";
+import { API_BASE } from "../config";
 
 function Supervisor() {
   const correo = localStorage.getItem("correo");

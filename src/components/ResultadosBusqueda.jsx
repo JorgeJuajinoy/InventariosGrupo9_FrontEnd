@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import "./ResultadosBusqueda.css";
 
 // 👇 Importa la constante global
-import { API_BASE } from "./config";
+import { API_BASE } from "../config";
 
 function ResultadosBusqueda() {
   const [searchParams] = useSearchParams();

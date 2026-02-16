@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CrearCuenta.css";
 
 // 👇 Importa la constante global
-import { API_BASE } from "./config";
+import { API_BASE } from "../config";
 
 function CrearCuenta() {
   const [formData, setFormData] = useState({

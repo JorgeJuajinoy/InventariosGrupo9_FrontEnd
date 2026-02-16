@@ -1,2 +1,3 @@
 // src/config.js
-export const API_BASE = "http://inventarios-adso-grupo9.infinityfree.me";
+export const API_BASE =
+  "https://inventarios-adso-grupo9.infinityfree.me/InventariosGrupo9";
